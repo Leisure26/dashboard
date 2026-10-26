@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="#dashboard" aria-label="Inventory Dashboard home">
+      <img src="images/logo.svg" alt="Inventory Dashboard">
+    </a>
+
+    <form role="search" action="#inventory" method="get">
+      <label for="site-search">Search inventory</label>
+      <input type="search" id="site-search" name="q" placeholder="Search products, SKU, or category">
+      <button type="submit">Search</button>
+    </form>
+
+    <p>Welcome back, Alex</p>
+    <button type="button" aria-label="Open user menu">Alex Morgan</button>
+  </header>
+
+  <aside aria-label="Dashboard sidebar">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#dashboard" aria-current="page">Dashboard</a></li>
+        <li><a href="#inventory">Products</a></li>
+        <li><a href="#orders">Orders</a></li>
+        <li><a href="#suppliers">Suppliers</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="dashboard">
+    <header>
+      <h1>Inventory Dashboard</h1>
+      <p>Overview of your products and stock levels.</p>
+    </header>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <article>
+        <h3>Total products</h3>
+        <p>15</p>
+      </article>
+      <article>
+        <h3>Low-stock items</h3>
+        <p>8</p>
+      </article>
+      <article id="orders">
+        <h3>Orders today</h3>
+        <p>12</p>
+      </article>
+      <article>
+        <h3>Inventory value</h3>
+        <p>KES 998,820</p>
+      </article>
+    </section>
+
+    <section id="inventory" aria-labelledby="inventory-heading">
+      <header>
+        <h2 id="inventory-heading">Inventory</h2>
+        <p>Products currently in stock</p>
+      </header>
+      <table>
+        <caption>Product inventory and stock status</caption>
+        <thead>
+          <tr>
+            <th scope="col">SKU</th>
+            <th scope="col">Product name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Status</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">EL-001</th><td>USB-C Cable 1m</td><td>Electronics</td><td>120</td><td>In stock</td><td>KES 450</td><td><button type="button" aria-label="Edit USB-C Cable 1m">Edit</button></td></tr>
+          <tr><th scope="row">EL-002</th><td>Wireless Mouse</td><td>Electronics</td><td>45</td><td>In stock</td><td>KES 1,200</td><td><button type="button" aria-label="Edit Wireless Mouse">Edit</button></td></tr>
+          <tr><th scope="row">EL-003</th><td>Bluetooth Speaker</td><td>Electronics</td><td>8</td><td>Low stock</td><td>KES 3,800</td><td><button type="button" aria-label="Edit Bluetooth Speaker">Edit</button></td></tr>
+          <tr><th scope="row">EL-004</th><td>Phone Charger 20W</td><td>Electronics</td><td>60</td><td>In stock</td><td>KES 1,500</td><td><button type="button" aria-label="Edit Phone Charger 20W">Edit</button></td></tr>
+          <tr><th scope="row">EL-005</th><td>Power Bank 10000mAh</td><td>Electronics</td><td>14</td><td>Low stock</td><td>KES 2,900</td><td><button type="button" aria-label="Edit Power Bank 10000mAh">Edit</button></td></tr>
+          <tr><th scope="row">ST-001</th><td>A4 Printing Paper (ream)</td><td>Stationery</td><td>200</td><td>In stock</td><td>KES 650</td><td><button type="button" aria-label="Edit A4 Printing Paper">Edit</button></td></tr>
+          <tr><th scope="row">ST-002</th><td>Ballpoint Pens (box of 50)</td><td>Stationery</td><td>75</td><td>In stock</td><td>KES 500</td><td><button type="button" aria-label="Edit Ballpoint Pens">Edit</button></td></tr>
+          <tr><th scope="row">ST-003</th><td>Stapler</td><td>Stationery</td><td>30</td><td>In stock</td><td>KES 350</td><td><button type="button" aria-label="Edit Stapler">Edit</button></td></tr>
+          <tr><th scope="row">ST-004</th><td>Notebook A5</td><td>Stationery</td><td>6</td><td>Low stock</td><td>KES 120</td><td><button type="button" aria-label="Edit Notebook A5">Edit</button></td></tr>
+          <tr><th scope="row">FU-001</th><td>Office Chair</td><td>Furniture</td><td>12</td><td>Low stock</td><td>KES 9,500</td><td><button type="button" aria-label="Edit Office Chair">Edit</button></td></tr>
+          <tr><th scope="row">FU-002</th><td>Standing Desk</td><td>Furniture</td><td>5</td><td>Low stock</td><td>KES 24,000</td><td><button type="button" aria-label="Edit Standing Desk">Edit</button></td></tr>
+          <tr><th scope="row">FU-003</th><td>Filing Cabinet</td><td>Furniture</td><td>9</td><td>Low stock</td><td>KES 11,500</td><td><button type="button" aria-label="Edit Filing Cabinet">Edit</button></td></tr>
+          <tr><th scope="row">TL-001</th><td>Cordless Drill</td><td>Tools</td><td>18</td><td>Low stock</td><td>KES 7,800</td><td><button type="button" aria-label="Edit Cordless Drill">Edit</button></td></tr>
+          <tr><th scope="row">TL-002</th><td>Screwdriver Set</td><td>Tools</td><td>40</td><td>In stock</td><td>KES 1,800</td><td><button type="button" aria-label="Edit Screwdriver Set">Edit</button></td></tr>
+          <tr><th scope="row">TL-003</th><td>Tape Measure 5m</td><td>Tools</td><td>3</td><td>Low stock</td><td>KES 400</td><td><button type="button" aria-label="Edit Tape Measure 5m">Edit</button></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="add-product-heading">
+      <h2 id="add-product-heading">Add product</h2>
+      <form action="#inventory" method="post">
+        <p>
+          <label for="product-name">Name</label>
+          <input type="text" id="product-name" name="name" required>
+        </p>
+        <p>
+          <label for="product-sku">SKU</label>
+          <input type="text" id="product-sku" name="sku" required>
+        </p>
+        <p>
+          <label for="product-category">Category</label>
+          <select id="product-category" name="category" required>
+            <option value="">Choose a category</option>
+            <option>Electronics</option>
+            <option>Stationery</option>
+            <option>Furniture</option>
+            <option>Tools</option>
+          </select>
+        </p>
+        <p>
+          <label for="product-quantity">Quantity</label>
+          <input type="number" id="product-quantity" name="quantity" min="0" required>
+        </p>
+        <p>
+          <label for="product-price">Price (KES)</label>
+          <input type="number" id="product-price" name="price" min="0" step="0.01" required>
+        </p>
+        <p>
+          <label for="product-notes">Notes</label>
+          <textarea id="product-notes" name="notes" rows="4"></textarea>
+        </p>
+        <button type="submit">Add product</button>
+      </form>
+    </section>
+
+    <section id="stock" aria-labelledby="stock-heading">
+      <h2 id="stock-heading">Stock by category</h2>
+      <ul>
+        <li>Electronics: <progress value="247" max="311">247 of 311 units</progress> 247 units</li>
+        <li>Stationery: <progress value="311" max="311">311 of 311 units</progress> 311 units</li>
+        <li>Furniture: <progress value="26" max="311">26 of 311 units</progress> 26 units</li>
+        <li>Tools: <progress value="61" max="311">61 of 311 units</progress> 61 units</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Inventory Dashboard</p>
+  </footer>
+</body>
+</html>

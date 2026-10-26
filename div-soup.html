@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>stock page</title>
+</head>
+<body>
+
+<div class="top">
+  <div class="logo"><img src="images/logo.svg"></div>
+  <div class="title">StockPro Inventory</div>
+  <div class="search">Search: <input type="text"></div>
+  <div class="user">Welcome, Amina</div>
+</div>
+
+<br><br>
+
+<div class="menu">
+  <div class="link" onclick="go('dashboard')">Dashboard</div>
+  <div class="link" onclick="go('products')">Products</div>
+  <div class="link" onclick="go('orders')">Orders</div>
+  <div class="link" onclick="go('suppliers')">Suppliers</div>
+  <div class="link" onclick="go('reports')">Reports</div>
+  <div class="link" onclick="go('settings')">Settings</div>
+</div>
+
+<div class="content">
+
+  <div class="big-title">Dashboard</div>
+
+  <div class="box">
+    <div class="small-title">Summary</div>
+    <div class="card"><span class="num">15</span><br><span>Total products</span></div>
+    <div class="card"><span class="num">8</span><br><span>Low stock</span></div>
+    <div class="card"><span class="num">23</span><br><span>Orders today</span></div>
+    <div class="card"><span class="num">KES 998,820</span><br><span>Inventory value</span></div>
+  </div>
+
+  <br><br>
+
+  <div class="box">
+    <div class="small-title">Inventory</div>
+    <div class="row head"><span>SKU</span><span>Product</span><span>Qty</span></div>
+    <div class="row"><span>EL-001</span><span>USB-C Cable 1m</span><span>120</span></div>
+    <div class="row"><span>EL-003</span><span>Bluetooth Speaker</span><span>8</span></div>
+    <div class="row"><span>ST-004</span><span>Notebook A5</span><span>6</span></div>
+  </div>
+
+  <br><br>
+
+  <div class="box">
+    <div class="small-title">Add product</div>
+    Name <input type="text" placeholder="Product name"><br>
+    SKU <input type="text" placeholder="SKU"><br>
+    Quantity <input type="text" placeholder="Quantity"><br>
+    <div class="button" onclick="save()">Save product</div>
+  </div>
+
+</div>
+
+<div class="bottom">StockPro 2026</div>
+
+</body>
+</html>
